@@ -1,5 +1,4 @@
-package com.mkk.ugd.threads.example5.program;
-
+package com.mkk.ugd.threads.example6.program;
 
 import com.mkk.ugd.utility.Util;
 
@@ -7,6 +6,11 @@ public class Islemci
 {
     private int sayac = 0;
     private static final int LIMIT = 500;
+
+    private synchronized void sayaciBirimArtir()
+    {
+        sayac++;
+    }
 
     public void sayaciArtir()
     {
@@ -17,7 +21,7 @@ public class Islemci
             {
                 for (int i = 0; i < LIMIT; i++)
                 {
-                    sayac++;
+                    sayaciBirimArtir(); // es zamanli yapilan islem metoda alindi
                 }
             }
         });
@@ -29,7 +33,7 @@ public class Islemci
             {
                 for (int i = 0; i < LIMIT; i++)
                 {
-                    sayac++;
+                    sayaciBirimArtir();
                 }
             }
         });
@@ -50,4 +54,5 @@ public class Islemci
 
         System.out.println("sayaç: " + sayac);
     }
+
 }
