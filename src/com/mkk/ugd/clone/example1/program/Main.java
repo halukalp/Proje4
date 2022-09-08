@@ -5,13 +5,13 @@ package com.mkk.ugd.clone.example1.program;
 class Main {
     public static void main(String[] args)
     {
-        Deneme deneme1 = new Deneme();
+        Deneme1 deneme1 = new Deneme1();
 
         System.out.println(deneme1.x + " " + deneme1.y);
 
         // Creating a new reference variable ob2
         // pointing to same address as ob1
-        Deneme deneme2 = deneme1;
+        Deneme1 deneme2 = deneme1;
 
         // Any change made in ob2 will
         // be reflected in ob1

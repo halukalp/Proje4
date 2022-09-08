@@ -14,6 +14,7 @@ public class Main
         deneme1.c.x = 30;
         deneme1.c.y = 40;
 
+
         Deneme2 deneme2 = (Deneme2)deneme1.clone();
 
         // Creating a copy of object t1
